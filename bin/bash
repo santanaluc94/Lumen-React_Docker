@@ -1,0 +1,9 @@
+#!/bin/bash
+ARG=$1
+if [ $ARG = "lumen" ]; then
+    docker exec -it lumen_php bash
+elif [ $ARG = "react" ]; then
+    docker exec -it lumen_node_react /bin/sh
+else
+    echo "Nenhum contêiner válido passado para inicializar."
+fi
